@@ -15,21 +15,23 @@ To run the software you need:
 - Docker
 - Docker compose
 
-### Install
-```sh
-$ git clone 'githubRepository'
-$ cd LinkBunch
-$ docker-compose up -d --build site
-$ docker-compose run --rm composer install
-$ docker-compose run --rm npm install
-$ docker-compose run --rm artisan migrate
-```
 #### Exposed ports
 
 - **nginx** - `:80`
 - **mysql** - `:3306`
 - **php** - `:9000`
 - **redis** - `:6379`
+
+### Install
+```sh
+$ git clone https://github.com/UniCT-WebDevelopment/LinkBunch.git
+$ cd LinkBunch
+$ docker-compose up -d --build site
+$ docker-compose run --rm composer install
+$ docker-compose run --rm npm install
+$ docker-compose run --rm artisan migrate
+```
+> Enjoy LinkBunch: [http://localhost](http://localhost)
 
 ## Installation with XAMPP
 
@@ -45,7 +47,6 @@ To run the software you need:
 - Run XAMPP
 - Open mysql
 ```sh
-$ mysql -uroot --protocol=tcp
 $ create database homestead;
 $ grant all privileges on homestead.* to 'homestead'@'%' identified by 'secret' with grant option;
 $ flush privileges;
@@ -54,9 +55,9 @@ $ flush privileges;
 ```sh
 $ php artisan migrate
 ```
-> Enjoy LinkBunch on [http://localhost/public/](http://localhost/public/)
+> Enjoy LinkBunch: [http://localhost/public/](http://localhost/public/)
 
-## With artisan
+## Installation with artisan
 
 ### Prerequisites
 
@@ -84,7 +85,7 @@ $ php artisan migrate
 $ php artisan serve
 ```
 
-> Enjoy LinkBunch on [localhost:8000](localhost:8000)
+> Enjoy LinkBunch: [localhost:8000](localhost:8000)
 
 ## Authors
 
